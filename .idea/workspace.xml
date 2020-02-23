@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a39a545c-3519-4f43-9f83-53753ef76ec8" name="Default" comment="" />
+    <list default="true" id="a39a545c-3519-4f43-9f83-53753ef76ec8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,29 +40,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.min.css" pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;104bc25a-c82a-4fa8-aaa3-2e27169489a3&gt;/magentaBabies/wp-content/themes/site_agence/css/styles.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret column="57945" selection-start-column="57945" selection-end-column="57945" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="styles.css" pinned="true" current-in-tab="false">
         <entry file="remoteDeploymentFS://&lt;104bc25a-c82a-4fa8-aaa3-2e27169489a3&gt;/magentaBabies/wp-content/themes/site_agence/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
+            <state relative-caret-position="154">
               <caret line="1394" column="14" selection-start-line="1394" selection-start-column="14" selection-end-line="1394" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_accueil.scss" pinned="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="435">
+                <caret line="25" column="64" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_accueil.scss" pinned="true" current-in-tab="false">
         <entry file="remoteDeploymentFS://&lt;104bc25a-c82a-4fa8-aaa3-2e27169489a3&gt;/magentaBabies/wp-content/themes/site_agence/scss/modules/_accueil.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="327">
               <caret line="49" selection-start-line="49" selection-end-line="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.min.css" pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;104bc25a-c82a-4fa8-aaa3-2e27169489a3&gt;/magentaBabies/wp-content/themes/site_agence/css/styles.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret column="33613" selection-start-column="33613" selection-end-column="33613" />
             </state>
           </provider>
         </entry>
@@ -70,17 +85,23 @@
     <findStrings>
       <find>visionneuse</find>
       <find>.accueil__realisations_</find>
+      <find>_boite</find>
+      <find>.accueil__realisations_boiteTexteBlanche</find>
       <find>.accueil__realisations</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/wp-content/themes/site_agence/scss/modules/_accueil.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/site_agence/css/styles.min.css" />
-        <option value="&lt;104bc25a-c82a-4fa8-aaa3-2e27169489a3&gt;/magentaBabies/wp-content/themes/site_agence/css/styles.min.css" />
         <option value="&lt;104bc25a-c82a-4fa8-aaa3-2e27169489a3&gt;/magentaBabies/wp-content/themes/site_agence/css/styles.css" />
         <option value="&lt;104bc25a-c82a-4fa8-aaa3-2e27169489a3&gt;/magentaBabies/wp-content/themes/site_agence/scss/modules/_accueil.scss" />
+        <option value="&lt;104bc25a-c82a-4fa8-aaa3-2e27169489a3&gt;/magentaBabies/wp-content/themes/site_agence/css/styles.min.css" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -100,6 +121,7 @@
     <option name="width" value="1774" />
     <option name="height" value="974" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -112,49 +134,6 @@
             <path>
               <item name="magentaBabies" type="b2602c69:ProjectViewProjectNode" />
               <item name="magentaBabies" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="magentaBabies" type="b2602c69:ProjectViewProjectNode" />
-              <item name="magentaBabies" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="magentaBabies" type="b2602c69:ProjectViewProjectNode" />
-              <item name="magentaBabies" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="magentaBabies" type="b2602c69:ProjectViewProjectNode" />
-              <item name="magentaBabies" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="site_agence" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="magentaBabies" type="b2602c69:ProjectViewProjectNode" />
-              <item name="magentaBabies" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="site_agence" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="magentaBabies" type="b2602c69:ProjectViewProjectNode" />
-              <item name="magentaBabies" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="site_agence" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="styles.css" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="magentaBabies" type="b2602c69:ProjectViewProjectNode" />
-              <item name="magentaBabies" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="site_agence" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -195,12 +174,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582476086748</updated>
-      <workItem from="1582476088101" duration="215000" />
+      <workItem from="1582476088101" duration="1397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215000" />
+    <option name="totallyTimeSpent" value="1397000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1774" height="974" extended-state="0" />
@@ -210,10 +189,9 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" anchor="right" id="Remote Host" visible="true" weight="0.3296767" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3295325" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -223,6 +201,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Remote Host" weight="0.3296767" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -249,6 +228,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret column="32511" lean-forward="true" selection-end-column="57945" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="435">
+            <caret line="25" column="64" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
