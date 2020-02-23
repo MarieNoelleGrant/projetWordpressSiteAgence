@@ -1,0 +1,227 @@
+//***Réalisations***//
+
+//***Page primaire***//
+.deco__titreH1--paleRealisations {
+  @media (min-width: $bureau) {
+    margin-bottom: 100px;
+  }
+}
+.realisations {
+  overflow: hidden;
+  background-color: $marine;
+  padding-bottom: 40px;
+  @media (min-width: $bureau) {
+  }
+    &--section {
+      position: relative;
+      margin-bottom: 50px;
+      @media (min-width: $bureau) {
+        margin-bottom: 222px;
+        width: 50%;
+        padding-right: 20px;
+        &:nth-child(even) {
+          //text-align: right;
+          padding-left: 20px;
+          padding-right: 0;
+        }
+      }
+      &__image {
+        position: relative;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+      }
+      &__cadreImg {
+        height: 50vw;
+        width: 100%;
+        position: relative;
+        @media (min-width: $bureau) {
+          position: absolute;
+          width: 200%;
+          height: 150%;
+          right: -50%;
+          top: -25%;
+          z-index: 1;
+        }
+      }
+      &:nth-child(odd) .realisations--section__cadreImg {
+        @media (min-width: $bureau) {
+          z-index: 2;
+          right: -25%;
+          -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+        }
+      }
+      &:nth-child(6) {
+        @media (min-width: $bureau) {
+          padding-left: 100px;
+        }
+        padding-top: 40px;
+        text-align: center;
+        color: white;
+        .realisations--section__cadreImg{
+          z-index: -1;
+        }
+        .bouton__pale {
+          margin: 0 auto;
+        }
+      }
+    }
+  &--proposer_img {
+    width: 75%;
+  }
+  &--section .realisations--boiteTexteBlanche {
+    z-index: 3;
+  }
+  &--boiteTexteBlanche {
+    position: relative;
+    background-color: white;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 84%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    @media (min-width: $bureau) {
+      clip-path: none;
+      height: 550px;
+    }
+    @media (min-width: 800px) {
+      height: calc(550px - 10vw);
+    }
+    &_espaceTxt {
+      padding: 20px 20px 60px 20px;
+    }
+  }
+  &__angle--turquoise {
+    background-color: $turquoise;
+    position: absolute;
+    -webkit-clip-path: polygon(0 95%, 100% 80%, 100% 85%, 0 100%);
+    clip-path: polygon(0 95%, 100% 80%, 100% 85%, 0 100%);
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    @media(min-width:$bureau) {
+      -webkit-clip-path: polygon(90% 0, 96% 0, 68% 100%, 62% 100%);
+      clip-path: polygon(94% 0, 100% 0, 68% 100%, 62% 100%);
+      //width: 100%;
+      top: 0;
+      right: inherit;
+      left: 7%;
+    }
+  }
+}
+
+/** page secondaire **/
+
+.realisation-seul {
+  margin-bottom: 0;
+}
+
+.realisationElement__nomClient {
+  color: $turquoise;
+  text-align: center;
+}
+
+.realisationElement{
+  overflow: hidden;
+  background-color: $marine;
+  & a {
+    color: $blanc;
+  }
+  &__contenu {
+    text-align: center;
+    background-color: $marine;
+    color: $blanc;
+    padding: 2rem 0;
+    & a {
+      color: $blanc;
+    }
+    @media (min-width: 601px) {
+      text-align: left;
+    }
+    &_conteneurPosition {
+      position: relative;
+      padding: 0;
+      margin-top: 3rem;
+      &_information {
+        margin-top: 20%;
+        @media (min-width: 601px) {
+          margin-top:initial;
+        }
+
+        &_conteneurPosition {
+          padding: 0;
+          margin-bottom: 4rem;
+          @media (min-width: 601px) {
+            position: relative;
+          }
+        }
+        width: span(4 of 4);
+        @media (min-width: 601px) {
+          width: span(7 of 12);
+        }
+        &_icon {
+          position: absolute;
+          top: 32%;
+          @media (min-width: 601px) {
+            position: initial;
+            top:initial;
+          }
+          & img{
+            width: span(2 of 4);
+            @media (min-width: 601px) {
+              width: span(3 of 7);
+            }
+          }
+        }
+        &_titre {
+        }
+        &_texte {
+          color: $blanc;
+          text-align: left;
+          margin: 4rem 0;
+        }
+      }
+
+      &_illustration {
+
+        width: 107%;
+        height: 400px;
+        bottom: 80%;
+        position: relative;
+
+        @media (min-width: 601px) {
+          width: 100%;
+          height: 100%;
+          bottom: 0;
+          left: 50%;
+          top: 0;
+          position: absolute;
+        }
+        &_deco{
+          clip-path: polygon(0% 94%, 100% 70%, 100% 76%, 0% 100%);
+          background-color: $turquoise;
+          width: 100%;
+          top:0;
+          @media (min-width: $bureau) {
+            left: 0;
+            clip-path: polygon(6% 0, 8% 0, 20% 100%,18% 100%);
+          }
+
+        }
+        &_image {
+          clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 90%);
+          background-size: cover;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-position: 30% 100%;
+          @media (min-width: $bureau) {
+            background-position: 50% 100%;
+            -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 22% 100%);
+            clip-path: polygon(10% 0, 100% 0, 100% 100%, 22% 100%);
+          }
+        }
+      }
+    }
+  }
+}

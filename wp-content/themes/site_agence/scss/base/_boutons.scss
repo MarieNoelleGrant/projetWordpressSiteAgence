@@ -1,0 +1,129 @@
+/**
+ * @author Marie-Noëlle Grant <m.noelle.grant@gmail.com>
+ * @todo
+*/
+
+/* Styles liens types boutons */
+.bouton {
+  &__pale {
+    width: fit-content;
+    a {
+      color: $blanc;
+    }
+    &_fond {
+      background-color: $marine;
+    }
+    &_neon, &_neon:hover {
+      display: inline-block;
+      background-color: transparent;
+      border: 3px $turquoise solid;
+      box-shadow: 0 0 10px transparentize($turquoise, 0.5), 0 0 10px transparentize($turquoise, 0.2) inset;
+      padding: 10px 10px;
+    }
+    @media(min-width:$bureau) {
+      &_neon {
+        border: 3px $blanc solid;
+        box-shadow: 0 0 10px transparentize($blanc, 0.5), 0 0 10px transparentize($blanc, 0.5) inset;
+        transition: all ease 0.5s;
+      }
+    }
+  }
+  &__fonce {
+    width: fit-content;
+    &_fond {
+      background-color: $blanc;
+    }
+    &_neon, &_neon:hover {
+      display: inline-block;
+      background-color: transparent;
+      border: 3px $magenta solid;
+      box-shadow: 0 0 10px transparentize($magenta, 0.5), 0 0 10px transparentize($magenta, 0.2) inset;
+      padding: 10px 10px;
+    }
+    @media(min-width:$bureau) {
+      &_neon {
+        border: 3px $noir solid;
+        box-shadow: 0 0 10px transparentize($noir, 0.5), 0 0 10px transparentize($noir, 0.5) inset;
+        transition: all ease 0.5s;
+      }
+    }
+  }
+}
+
+/*** Styles liens normaux ***/
+.lien {
+  &__pale, &__fonce {
+    &_neon {
+      &--turquoise, &--magenta {
+        padding-bottom: 5px;
+        background-color: transparent;
+        transition: all ease 0.5s;
+      }
+      &--turquoise {
+        box-shadow: 0 -4px 7px -4px transparentize($turquoise, 0.15) inset;
+        border-bottom: 4px $turquoise solid;
+      }
+      &--magenta {
+        box-shadow: 0 -4px 7px -4px $rosePale inset;
+        border-bottom: 4px $magenta solid;
+      }
+      @media (min-width: $bureau) {
+        &--turquoise {
+          border-bottom-color: transparentize($turquoise, 0.6);
+          &:hover {
+            border-bottom-color: $turquoise;
+          }
+        }
+        &--magenta {
+          border-bottom-color: transparentize($magenta, 0.6);
+          &:hover {
+            border-bottom-color: $magenta;
+          }
+        }
+      }
+    }
+  }
+  &__pale {
+    &_neon {
+      &--turquoise, &--magenta {
+        color: $blanc;
+      }
+    }
+  }
+}
+
+/*** Styles liens retour page précédente (pages contenu secondaire) ***/
+.boutonRetour{
+  width: span(3 of 4);
+  font-weight: 300;
+  text-align: left;
+  @media (min-width: 601px) {
+    width: span(4 of 12);
+  }
+  &__fleche{
+    width: gutter(4)*2;
+    vertical-align: middle;
+    margin-right: gutter(4)*2;
+    transition: all ease 0.5s;
+    @media (min-width: $bureau) {
+      opacity: 0.6;
+    }
+  }
+  &__texte {
+    transition: all ease 0.5s;
+    display: inline-block;
+    border-bottom: 1px $turquoise solid;
+    @media (min-width: $bureau) {
+      border-bottom: 1px transparent solid;
+    }
+  }
+  &:hover {
+    .boutonRetour__texte {
+      transform: translateX(-10px);
+      border-bottom: 1px $turquoise solid;
+    }
+    .boutonRetour__fleche {
+      opacity: 1;
+    }
+  }
+}

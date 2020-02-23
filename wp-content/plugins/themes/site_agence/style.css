@@ -1,0 +1,174 @@
+/*
+Theme Name: Site Agence
+Author: Marie-Noëlle Grant
+Description: C'est un thème simple pour WordPress
+Version: 0.1
+*/
+
+/* Styles généraux */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font: .8em Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* Structure générale */
+#en-tete, nav, #contenu, footer {
+    max-width: 960px;
+    margin: 0 auto;
+}
+label.screen-reader-text {
+    display: block;
+}
+main, #article-seul {
+    float: left;
+}
+#article-seul {
+    width: 70%;
+}
+
+
+/* Mise en forme des lignes */
+#en-tete {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+#contenu {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* En-tête */
+#en-tete {
+    background-color: #eee;
+    border-bottom: 1px solid #333;
+}
+#en-tete h1 {
+    padding: 10px;
+}
+@media (min-width: 1000px) {
+    #en-tete h1 {
+        padding: 10px 10px 10px 70px;
+    }
+}
+
+/* Mise en forme de l'entête */
+header {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+header.image {
+    height: auto;
+}
+.inline {
+    display: inline;
+}
+
+/* Barre des menus */
+#principal, #secondaire {
+    border-bottom: 1px solid #333;
+}
+#en-tete nav ul {
+    list-style: none;
+    padding: 10px 0 10px 10px;
+    margin: 0 0 0 10px;
+}
+#en-tete nav li {
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+
+
+/* Les articles en page d'accueil */
+article {
+    border-bottom: 1px dotted #333;
+    padding-right: 8px;
+}
+article header.titre-article a {
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1.3em;
+    color: #000;
+}
+
+/* Mise en forme des sidebars */
+#main, #articles {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+@media(min-width:601px) {
+    #gauche {
+        float: left;
+        border-right: 1px solid #333;
+    }
+    #droite {
+        float: right;
+        border-left: 1px solid #333;
+    }
+}
+
+#gauche ul, #droite ul {
+    list-style: none;
+    padding: 10px 0 10px 10px;
+    margin: 0 10px 0 0;
+}
+
+/* Le pied de page */
+footer {
+    background-color: #eee;
+    border-top: 1px solid #333;
+    clear: both;
+    max-width: 1140px;
+    clear: both;
+}
+footer p {
+    margin: 0;
+    padding: 10px;
+    font-size: 1em;
+}
+
+/* Les articles en page seule */
+#article-seul {
+    padding-right: 8px;
+}
+.metadata {
+    font-size: 0.8em;
+    color: gray;
+}
+
+/* Les pages */
+.en-tete-page {
+    font-style: italic;
+}
+
+/* Images à la une */
+.image-une {
+    background-color: #eee;
+}
+
+/* Règles pour petits écrans */
+@media only screen and (max-width: 735px) {
+    main, aside, #article-seul {
+        float: none;
+        width: 100%!important;
+    }
+    main, #article-seul {
+        border-bottom: 1px solid #333;
+    }
+    aside {
+        border-left: none;
+    }
+    aside ul {
+        margin-left: 0;
+        display:flex;
+        flex-flow: row wrap;
+    }
+    aside ul li {
+        margin-right: 20px;
+        padding-top: 10px;
+    }
+}

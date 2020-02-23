@@ -1,0 +1,176 @@
+
+//.parentRelatif {
+//  position: relative;
+//}
+
+.deco {
+  /*** Élément décoratif fond blanc textes + diagonale ***/
+  &__boiteTexteBlanche {
+    //@todo À mettre avec un parent en relatif!!! Ajouter top, bottom, left ou right au besoin.
+    position: absolute;
+    top: 20%;
+    width: span(4 of 4) - gutter(4)*2;
+    left: 0;
+    right: 0;
+    margin: 0 auto 30px;
+    @media(min-width:$bureau) {
+      width: span(6 of 12);
+      padding-left: 20px;
+    }
+    &_espaceTxt {
+      background-color: $blanc;
+      padding: 50px 0 20px;
+      -webkit-clip-path: polygon(0 100%, 0 12%, 100% 24%, 100% 100%);
+      clip-path: polygon(0 100%, 0 12%, 100% 24%, 100% 100%);
+      @media(min-width:$bureau) {
+        padding: 10px;
+        left: 8%;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        height: fit-content;
+        -webkit-clip-path: polygon(0 0, 90% 0, 62% 100%, 0% 100%);
+        clip-path: polygon(0 0, 98% 0, 65% 100%, 0% 100%);
+      }
+    }
+    &_txt {
+      padding: 30px 10px 0;
+      @media(min-width:$bureau) {
+        width: span(5 of 6);
+        padding: 20px 30px 0 10px;
+      }
+    }
+
+  }
+
+  &__angle--turquoise {
+    background-color: $turquoise;
+    position: absolute;
+    -webkit-clip-path: polygon(0 15%, 0 10%, 100% 23%, 100% 28%);
+    clip-path: polygon(0 15%, 0 10%, 100% 23%, 100% 28%);
+    height: 100%;
+    width: 100%;
+    top:-20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    @media(min-width:$bureau) {
+      -webkit-clip-path: polygon(90% 0, 96% 0, 68% 100%, 62% 100%);
+      clip-path: polygon(94% 0, 100% 0, 68% 100%, 62% 100%);
+      //width: 100%;
+      top: 0;
+      right: inherit;
+      left: 7%;
+    }
+  }
+
+  /*** STYLE POUR TITRES DÉCORATIFS ***/
+
+  &__titreH1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    @media(min-width:$bureau) {
+      &--pale {
+        &Realisations {
+          background: url('../../../uploads/2019/03/deco__zigzagTurquoise.png') no-repeat 102% center;
+          background-size: 60%;
+          color: $blanc;
+        }
+        &Services {
+          background: url('../../../uploads/2019/03/deco__zigzagTurquoise.png') no-repeat 102% center;
+          background-size: 71%;
+          color: $blanc;
+        }
+      }
+      &--fonce {
+        background: url('../../../uploads/2019/03/deco__vaguesMagenta.png') no-repeat 102% center;
+        background-size: 70%;
+        color: $noir;
+      }
+    }
+    &_titre {
+      background-color: $marine;
+      &--accentTurquoise {
+        color: $marine;
+        text-shadow: -1px -1px 0px $turquoise, 1px -1px 0 $turquoise, -1px 1px 0 $turquoise, 1px 1px 0 $turquoise, 0 0 10px transparentize($turquoise, 0.50);
+      }
+      &--fonce {
+        background-color: $grisTresPale;
+      }
+      &--accentMagenta {
+        background: url('../../../uploads/2019/03/motifRayons_rose.png') no-repeat bottom center, url('../../../uploads/2019/03/motifRayons_rose-180.png') no-repeat top center;
+        background-size: contain;
+        padding: 50px 0;
+        @media (min-width: $bureau) {
+          padding: 70px 0;
+        }
+      }
+    }
+  }
+
+  /*** STYLE SPÉCIFIQUES À L'ACCUEIL POUR TITRES ***/
+  &__titreH1Accueil {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    &--pale {
+      color: $blanc;
+      & .deco__titreH1Accueil_titre {
+        background-color: $marine;
+        &--accentTurquoise {
+          color: $marine;
+          text-shadow: -1px -1px 0px $turquoise, 1px -1px 0 $turquoise, -1px 1px 0 $turquoise, 1px 1px 0 $turquoise, 0 0 10px transparentize($turquoise, 0.50);
+        }
+      }
+    }
+    &--fonce {
+      color: $noir;
+      & .deco__titreH1Accueil_titre {
+        background: linear-gradient(transparent 0%, $grisTresPale 50%, $grisTresPale 60%, transparent 100%);
+        &--accentMagenta {
+          background: url('../../../uploads/2019/03/motifRayons_rose.png') no-repeat bottom center, url('../../../uploads/2019/03/motifRayons_rose-180.png') no-repeat top center;
+          background-size: contain;
+          padding: 50px 0;
+          @media (min-width: $bureau) {
+            padding: 58px 0;
+          }
+        }
+      }
+    }
+    @media(min-width: $bureau) {
+      &--pale {
+        background: url('../../../uploads/2019/03/deco__zigzagTurquoise.png') no-repeat 78% center;
+        background-size: 55%;
+      }
+      &--fonce {
+        background: url('../../../uploads/2019/03/deco__vaguesMagenta.png') no-repeat 78% center;
+        background-size: 55%;
+      }
+    }
+  }
+  /* important de mettre dans sa balise relative. appliqué deux classes, comme celui de magenta est si la couleur est cela */
+  &__boiteNeon{
+    position: absolute;
+    border: 2px solid $blanc;
+    box-shadow: inset 0 0 25px 1px $blanc, 0 0 25px 1px $blanc;
+    &-magenta{
+      border-color: $magenta;
+      box-shadow: inset 0 0 25px 1px $magenta, 0 0 25px 1px $magenta;
+    }
+  }
+
+  &__nomService {
+    text-align: center;
+    color: $marine;
+    font-weight: 200;
+    text-transform: uppercase;
+    text-shadow: -1px -1px 0px $blanc, 1px -1px 0 $blanc, -1px 1px 0 $blanc, 1px 1px 0 $blanc, 0 0 10px transparentize($blanc, 0.25);
+  }
+}
+
+
+
+

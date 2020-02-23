@@ -1,0 +1,392 @@
+/* service */
+.image_bureau_service {
+  display: none;
+}
+@media (min-width: 600px) {
+  .image_bureau_service {
+    display: block;
+  }
+  .image_mobile_service{
+    display: none;
+  }
+}
+
+
+/** page primaire **/
+
+.service{
+  &__presentation{
+    margin-bottom: 1rem;
+    background-color: $marine;
+    padding-bottom: 13rem;
+    &_titre{
+      margin-bottom: 4rem;
+    }
+    &_conteneurPosition{
+      position: relative;
+      width: span(4 of 4);
+      padding: 0;
+      @media (min-width: $bureau) {
+        width: span(12 of 12);
+
+      }
+      &_image img{
+        @media (min-width: $bureau) {
+          width: span(11 of 12);
+          margin-left: span(1 of 12) + gutter(1 of 12);
+        }
+
+      }
+      &_boiteTexte{
+        top:inherit;
+        bottom: -40%;
+        margin: 0;
+        &_deco{
+          width: 100%;
+          margin: 0;
+        }
+        &_interne{
+          width: 100%;
+          @media (max-width: 600px) {
+
+          }
+        }
+        width: span(4 of 4);
+        @media (min-width: $bureau) {
+          bottom: -20%;
+          top:initial;
+
+          padding: 0;
+          width: span(7 of 12);
+        }
+
+      }
+      &_texte{
+
+        @media (min-width: $bureau) {
+          width: span(5 of 7);
+          padding: 0;
+          margin-right: gutter(1 of 12);
+        }
+
+      }
+    }
+  }
+
+  &__contenu{
+    margin: 3rem 0;
+    padding: 5rem 0;
+    overflow: hidden;
+    &_backgroundDeco{
+      width: 1000px;
+      height: 104%;
+      top: -2%;
+      left: 34px;
+      z-index: -1;
+      margin: 0 auto;
+      right: -29px;
+      @media(min-width:$bureau) {
+        width: 1000px;
+        height: 108%;
+        top: -3%;
+        left: 91px;
+        z-index: -1;
+        right: -92px;
+      }
+    }
+    &_conteneurPosition{
+      position:relative;
+    }
+    &_groupement{
+      display: flex;
+      flex-wrap: wrap;
+      width: span(4 of 4);
+      @media (min-width: $bureau) {
+        width: span(12 of 12);
+      }
+    }
+    &_element{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      background-color: $marine;
+      color: $blanc;
+      text-align: center;
+      width: span(4 of 4);
+      margin: 1rem 0;
+      padding: 1rem;
+      @media (min-width: $bureau) {
+        width: span(4 of 12);
+        margin-right: gutter(1 of 12);
+        &:nth-of-type(3n+3){
+          margin-right: 0;
+        }
+      }
+      &_icon{
+        width: span(2 of 4);
+      }
+      &_titre{
+        height: 50px;
+        @media (min-width: $bureau) {
+          height: 100px;
+          @media (min-width: 1000px) {
+            height: 60px;
+          }
+        }
+      }
+      &_texte{
+
+      }
+      &_link{
+        flex-grow: 1;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+/** page secondaire **/
+
+.serviceElement{
+  background-color: $marine;
+  overflow: hidden;
+  & a {
+    color: $blanc;
+  }
+  &__contenu {
+    text-align: center;
+    background-color: $marine;
+    color: $blanc;
+    padding: 2rem 0;
+    & a {
+      color: $blanc;
+    }
+    @media (min-width: $bureau) {
+      text-align: left;
+    }
+    &_titre{
+      margin-bottom: 4rem;
+    }
+    &_conteneurPosition {
+      position: relative;
+      padding: 0;
+      margin-top: 3rem;
+      &_information {
+        margin-top: 20%;
+        @media (min-width: $bureau) {
+          margin-top:initial;
+        }
+
+        &_conteneurPosition {
+          padding: 0;
+          margin-bottom: 4rem;
+          @media (min-width: $bureau) {
+            position: relative;
+          }
+        }
+        width: span(4 of 4);
+        @media (min-width: $bureau) {
+          width: span(7 of 12);
+        }
+        &_icon {
+        position: absolute;
+          top: 32%;
+          @media (min-width: $bureau) {
+            position: initial;
+            top:initial;
+          }
+          & img{
+            width: span(2 of 4);
+            @media (min-width: $bureau) {
+              width: span(3 of 7);
+            }
+          }
+        }
+        &_titre {
+
+          @media (min-width: $bureau) {
+            width: span(3 of 7);
+            position: absolute;
+            left: 45%;
+            bottom: -10%;
+            text-align: left;
+          }
+        }
+        &_texte {
+          text-align: left;
+          margin: 4rem 0;
+        }
+        &_responsable {
+          display: inline-block;
+          margin-top: 4rem;
+          @media (min-width: $bureau) {
+            width: span(4 of 7);
+            text-align: left;
+          }
+        }
+      }
+
+      &_illustration {
+
+        width: 107%;
+        height: 400px;
+        bottom: 80%;
+        position: relative;
+
+        @media (min-width: $bureau) {
+          width: 100%;
+          height: 100%;
+          bottom: 0;
+          left: 50%;
+          top: 0;
+          position: absolute;
+        }
+        &_deco{
+          clip-path: polygon(0% 94%, 100% 70%, 100% 76%, 0% 100%);
+          background-color: $turquoise;
+          width: 100%;
+          top:0;
+          @media (min-width: $bureau) {
+            left: 0;
+            clip-path: polygon(0% 0, 4% 0, 33% 100%,29% 100%);
+          }
+
+        }
+        &_image {
+          clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 90%);
+          background-size: cover;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-position: 30% 100%;
+          @media (min-width: $bureau) {
+            background-position: 70% 100%;
+            -webkit-clip-path: polygon(6% 0, 100% 0, 100% 100%, 35% 100%);
+            clip-path: polygon(6% 0, 100% 0, 100% 100%, 35% 100%);
+            @media (min-width: 1000px) {
+              background-position: 50px;
+            }
+          }
+        }
+      }
+    }
+
+    &_nav{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 4rem;
+      &_titre{
+        text-align: center;
+        @include fontSize(14px);
+        max-width: 118px;
+        @media (min-width:$bureau) {
+          @include fontSize(16px);
+          max-width: 130px;
+          opacity: 0;
+          transition: all ease 0.5s;
+        }
+      }
+      &_fleche{
+        width: 32px;
+        @media (min-width: $bureau) {
+          width: span(2 of 12);
+          opacity: 0.6;
+        }
+      }
+      &_icon{
+        display: none;
+        @media (min-width: $bureau) {
+          display: inline-block;
+          width: span(3 of 4);
+          transform: translateY(20px);
+          transition: all ease 0.5s;
+          &:first-of-type{
+            margin-right: gutter(1 of 4);
+          }
+          &:last-of-type{
+            margin-left: gutter(1 of 4);
+          }
+        }
+      }
+      &_before, &_next {
+        .icone {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: flex-end;
+          align-items: center;
+          height: 60px;
+          width: 100%;
+          @media (min-width: $bureau) {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-content: center;
+            height: initial;
+          }
+          &:hover {
+            .serviceElement__contenu_nav_fleche {
+              opacity: 1;
+            }
+            .serviceElement__contenu_nav_icon {
+              transform: translateY(0);
+            }
+            .serviceElement__contenu_nav_titre {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      &_sousConteneur {
+        @media (min-width:$bureau) {
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center;
+        }
+      }
+      &_before {
+        .serviceElement__contenu_nav_titre {
+          padding-left: 10px;
+          @media (min-width:$bureau) {
+            padding-left: 0;
+          }
+        }
+      }
+      &_next {
+        .serviceElement__contenu_nav {
+           &_titre {
+             padding-right: 10px;
+             @media (min-width:$bureau) {
+               padding-right: 0;
+             }
+           }
+          &_sousConteneur {
+            @media (min-width: $bureau) {
+              display: flex;
+              flex-flow: column-reverse nowrap;
+              align-items: center;
+            }
+          }
+        }
+        .icone {
+          @media (min-width:$bureau) {
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* cas apart */
+
+.postid-110{
+  .serviceElement__contenu_conteneurPosition_information_icon{
+    top:26%;
+    @media (min-width: $bureau) {
+      top:initial;
+    }
+  }
+}

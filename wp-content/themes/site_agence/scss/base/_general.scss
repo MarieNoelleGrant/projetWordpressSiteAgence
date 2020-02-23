@@ -1,0 +1,58 @@
+/**
+* @author Marie-Noëlle Grant <m.noelle.grant@gmail.com>
+*/
+
+/**
+ * ----------------------------
+ * TABLE DES MATIERES - GÉNÉRAL
+ * ----------------------------
+ * *** Styles de base *********
+ *  Styles généraux
+ *  Structure générale
+ *  Mise en forme des lignes
+ *  Mise en forme des sidebars
+ *  Les pages
+ *  Règles pour petits écrans
+ *
+ * ----------------------------
+ */
+
+
+/*** Styles de base *******************************************/
+/* Styles généraux */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  // Couleur arrière plan body
+  background-color: $grisTresPale;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+ul {
+  //list-style: none;
+  //padding-left: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.mobileOnly{
+  @media (min-width: $bureau) {
+    display: none;
+  }
+}
+.tableOnly{
+  @media (max-width: $bureau) {
+    display: none;
+  }
+}
+

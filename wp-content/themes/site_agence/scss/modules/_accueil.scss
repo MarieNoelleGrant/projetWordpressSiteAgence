@@ -1,0 +1,236 @@
+/**
+ * @author Marie-Noëlle Grant <m.noelle.grant@gmail.com>
+ */
+
+.accueil {
+  &__ancres {
+    &_conteneur {
+      flex-flow: row nowrap;
+      justify-content: space-around;
+    }
+    &_item {
+      font-weight: 600;
+    }
+  }
+  &__realisations, &__services {
+    background-color: $marine;
+    color: $blanc;
+  }
+  &__nouvelles {
+    padding-top: 130px;
+    padding-bottom: 92px;
+    margin-bottom: 47px;
+    @media(min-width:$bureau) {
+      padding-top: initial;
+      padding-bottom: 0;
+    }
+  }
+  .bouton__accueil {
+    &.mobileOnly {
+      margin: 0 auto;
+    }
+  }
+}
+
+/*** SECTION RÉALISATIONS **********************************************************************************************/
+
+/* Voir visionneuse.scss pour tout ce qui a trait à la visionneuse!!! */
+.accueil {
+  &__realisations {
+    position: relative;
+    padding-bottom: 60px;
+    margin-top: 50px;
+    @media(min-width:$bureau) {
+      padding-bottom: 0;
+    }
+    &_boiteTexteBlanche {
+      top: inherit;
+      bottom: 23%;
+      margin: 0 20px 30px;
+      //max-width: fit-content;
+      @media(min-width:$bureau) {
+        top: inherit;
+        bottom: 60px;
+        left: span(1 of 12) + gutter(12);
+        right: inherit;
+        padding-left: 0;
+        margin: 0;
+      }
+    }
+    &_titre {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    &_client {
+      font-weight: 300;
+      @include fontSize(18px);
+    }
+    &_espaceTxt {
+      color: $noir;
+      display: flex;
+      flex-flow: column wrap;
+      height: 280px;
+      overflow: hidden;
+      &_conteneur {
+        width: 100%;
+        transition: all ease .6s
+      }
+      /* RÈGLES POUR VISIONNEUSE : TEXTE **********************************/
+      &--plus1, &--moins1 {
+        .accueil__realisations_espaceTxt_conteneur {
+          transform: translate(-100%);
+        }
+      }
+      &--plus2, &--moins2 {
+        .accueil__realisations_espaceTxt_conteneur {
+          transform: translate(-200%);
+        }
+      }
+      &--plus3, &--moins3 {
+        .accueil__realisations_espaceTxt_conteneur {
+          transform: translate(-300%);
+        }
+      }
+      &--plus4, &--moins4 {
+        .accueil__realisations_espaceTxt_conteneur {
+          transform: translate(-400%);
+        }
+      }
+    }
+    &_client, &_description, &_lien {
+      padding-top: 0;
+      margin-top: 0;
+    }
+  }
+}
+
+/*** SECTION NOUVELLES **********************************************************************************************/
+
+/* Les articles en page d'accueil */
+.nouvelles {
+  position: relative;
+  overflow: hidden;
+  &__entete {
+    @media(min-width:$bureau) {
+      margin-bottom: 53px;
+      padding-top: 147px;
+    }
+  }
+  &__groupe {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    @media(min-width:$bureau) {
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-content: space-between;
+      height: 170vw;
+      max-height: 1054px;
+    }
+  }
+  &__boiteNeon {
+    width: 1000px;
+    height: 95%;
+    top: 69px;
+    left: 34px;
+    z-index: -1;
+    margin: 0 auto;
+    right: -29px;
+    @media(min-width:$bureau) {
+      width: 1000px;
+      height: 80%;
+      top: 56px;
+      left: 91px;
+      z-index: -1;
+      right: -92px;
+    }
+  }
+}
+
+.nouvelle {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  box-shadow: 0 0 15px transparentize($noir, 0.75);
+  background-color: $blanc;
+  &__titre, &__date, &__contenu {
+    padding: 0 20px;
+  }
+  &__titre {
+    margin-bottom: 5px;
+    @include fontSize(20px);
+  }
+  &__contenu {
+    padding-bottom: 20px;
+  }
+  &:first-of-type {
+    @include boxShadow_Turquoise;
+    background-color: $blanc;
+  }
+  &:nth-of-type(2), &:last-of-type {
+    .nouvelle__contenu .nouvelle__extrait {
+      display: none;
+    }
+  }
+  @media(min-width:$bureau) {
+    width: span(6 of 12);
+    height: fit-content;
+  }
+}
+
+
+/*** SECTION SERVICES **********************************************************************************************/
+.accueil {
+  &__services {
+    padding: 45px 0 85px;
+    @media (min-width:$bureau) {
+      padding-bottom: 0;
+    }
+    &_entete {
+      padding-bottom: 40px;
+    }
+    // Régles pour l'organisation section icones et titres des services tirés au hasard
+    &_visuel {
+      width: span(2 of 4);
+      margin: 0 auto;
+      @media (min-width:$bureau) {
+        width: span(6 of 12);
+        margin: 40px span(1 of 12)+gutter(12)*2 0 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+      }
+    }
+    &_item {
+      margin-bottom: 20%;
+      @media (min-width:$bureau) {
+        width: span(2 of 6);
+      }
+    }
+    &_accroche {
+      padding-left: gutter(4);
+      margin-top: 40px;
+      margin-bottom: 60px;
+      p {
+        width: fit-content;
+        @include fontSize(24px);
+        margin-bottom: 0;
+      }
+      &--lien {
+        border-bottom-width: 4px;
+        font-weight: 600;
+        margin-top: 5px;
+      }
+      @media (min-width:$bureau) {
+        padding-left: 0;
+      }
+    }
+    &_nom {
+      @include fontSize(24px);
+      @media(min-width:$bureau) {
+        @include fontSize(20px);
+      }
+    }
+  }
+}

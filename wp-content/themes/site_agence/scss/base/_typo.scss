@@ -1,0 +1,104 @@
+/**
+ * @author Marie-Noëlle Grant <m.noelle.grant@gmail.com>
+ * @todo
+*/
+
+/**
+ * ----------------------------
+ * TABLE DES MATIERES - MIXINS
+ * ----------------------------
+ * Importation des polices
+ * Règles générales
+ * Règles spécifiques
+ * ----------------------------
+ */
+
+/*** Importation des polices *******************************************/
+@font-face {
+  font-family: "Neon Absolute Sans";
+  src: url(../../fonts/NeonAbsoluteSans.ttf);
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,500,700,900');
+
+
+/*** Règles générales **************************************************/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include fontSize(16px);
+  font-family: $fontePrimaire;
+  line-height: 1.375;
+  /* facteur multiplicateur de la taille de la police 1.375x16=22 */
+  @media (min-width:$bureau) {
+    line-height: 1.5;
+  }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3{
+  font-family: $fontePrimaire;
+}
+
+
+h1, .h1 {
+  @include fontSize(30px);
+  font-weight: 700;
+  @media (min-width:$bureau) {
+    @include fontSize(40px);
+  }
+}
+
+h2, .h2{
+  @include fontSize(22px);
+  font-weight: 700;
+  @media (min-width:$bureau) {
+    @include fontSize(28px);
+  }
+}
+
+h3, .h3{
+  @include fontSize(20px);
+  @media (min-width:$bureau) {
+    @include fontSize(22px);
+  }
+}
+
+h4, .h4{
+  @include fontSize(18px);
+  @media (min-width:$bureau) {
+    @include fontSize(20px);
+  }
+}
+
+
+/*** Règles spécifiques **************************************************/
+.button, .lien {
+  font-family: $fonteLiensBoutons;
+  @include fontSize(18px);
+}
+
+/*** Règles styler h1 dans toutes les pages ***/
+.deco__titreH1, .deco__titreH1Accueil {
+  &--pale, &--fonce {
+    h1, h2.h1 {
+      margin: 0;
+      padding: 30px 0;
+      text-transform: uppercase;
+    }
+  }
+  &--pale {
+    h1, h2.h1 {
+      color: $marine;
+      text-shadow: -1px -1px 0px $blanc, 1px -1px 0 $blanc, -1px 1px 0 $blanc, 1px 1px 0 $blanc, 0 0 10px transparentize($blanc, 0.50);
+    }
+  }
+  &--fonce {
+    h1, h2.h1 {
+      color: $blanc;
+      text-shadow: -1px -1px 0px $noir, 1px -1px 0 $noir, -1px 1px 0 $noir, 1px 1px 0 $noir, 0 0 5px transparentize($noir, 0.20);
+    }
+  }
+}

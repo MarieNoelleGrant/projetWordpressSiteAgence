@@ -1,0 +1,395 @@
+/**
+ * @author Marie-Noëlle Grant <m.noelle.grant@gmail.com>
+ */
+
+/* En-tête */
+#en-tete {
+  width: 100%;
+  height: 120vw;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: $bureau) {
+  #en-tete {
+    height: 600px;
+  }
+}
+@media (min-width: 1001px) {
+  #en-tete {
+    height: 800px;
+  }
+}
+#en-tete h1 {
+  padding: 10px;
+}
+#en-tete h1 a {
+  color: $blanc;
+}
+
+/*** IMAGES ARRIÈRE PLAN *******************************************************************************************/
+
+/** 1) ACCUEIL **/
+.home {
+  .fond_header {
+    background: url('../../../uploads/2019/03/entete__fond.jpg') no-repeat top center;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+  }
+
+  .elementGraphique_header {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../../../uploads/2019/03/entete__accueil_eleGraphique-mobile.png') no-repeat top left;
+    background-size: cover;
+    right: 0;
+    bottom: 0;
+    @media (min-width: $bureau) {
+      background: url('../../../uploads/2019/03/entete__accueil_eleGraphique-table.png') no-repeat bottom right;
+      background-size: auto;
+      right: 5%;
+    }
+    @media (min-width: 1001px) {
+      padding-left: calc(700px + 50%);
+      background: url('../../../uploads/2019/03/entete__accueil_eleGraphique-ecranLarge.png') no-repeat 100% 105%;
+      background-size: auto;
+      left: calc(400px - 58%);
+      right:0;
+    }
+  }
+}
+
+/** AUTRES PAGES **/
+/** Règles générales **/
+.page-template-page-realisations, .page-template-page-services, .page-template-page-equipe {
+  #en-tete {
+    width: 100%;
+    height: 130vw;
+    position: relative;
+  }
+  @media (min-width: $bureau) {
+    #en-tete {
+      height: 600px;
+    }
+  }
+  @media (min-width: 1001px) {
+    #en-tete {
+      height: 700px;
+    }
+  }
+  #en-tete h1 {
+    padding: 10px;
+  }
+  @media (min-width:$bureau) {
+    .fond_header {
+      background: url('../../../uploads/2019/03/entete__fond.jpg') no-repeat top center;
+      background-size: cover;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+/** 2) ÉQUIPE **/
+.page-template-page-equipe {
+  .elementGraphique_header {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../../../uploads/2019/03/entete__equipe_eleGraphique-mobile.jpg') no-repeat bottom right;
+    background-size: cover;
+    right: 0;
+    bottom: 0;
+    @media (min-width: $bureau) {
+      background: url('../../../uploads/2019/03/entete__equipe_eleGraphique-table.png') no-repeat bottom right;
+      background-size: cover;
+      right: 0;
+    }
+    @media (min-width: 1001px) {
+        padding-right: calc(979px + 22%);
+        background: url('../../../uploads/2019/03/entete__equipe_eleGraphique-ecranLarge.png') no-repeat 100% 70%;
+        background-size: cover;
+        right: calc(600px - 17%);
+        left:0;
+    }
+    @media (min-width: 1200px) {
+      padding-right: calc(979px + 22%);
+      right: calc(600px - 2%);
+    }
+  }
+}
+
+
+/** 3) SERVICES **/
+.page-template-page-services {
+  .elementGraphique_header {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../../../uploads/2019/03/entete__services-eleGraphique-mobile.jpg') no-repeat bottom right;
+    background-size: cover;
+    right: 0;
+    bottom: 0;
+    @media (min-width: $bureau) {
+      background: url('../../../uploads/2019/03/entete__services_eleGraphique-table.png') no-repeat 0% 59%;
+      background-size: 150%;
+      right: 0;
+    }
+    @media (min-width: 1001px) {
+      padding-right: calc(700px + 50%);
+      background: url('../../../uploads/2019/03/entete__services_eleGraphique-ecranLarge.png') no-repeat 100% 75%;
+      background-size: 100%;
+      right: calc(400px - 60%);
+      left:0;
+    }
+  }
+}
+
+/** 4) RÉALISATIONS **/
+.page-template-page-realisations {
+  .elementGraphique_header {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../../../uploads/2019/03/entete__realisations_eleGraphique-mobile.jpg') no-repeat bottom right;
+    background-size: cover;
+    right: 0;
+    bottom: 0;
+    @media (min-width:$bureau) and (max-width:750px) {
+      bottom: -120px
+    }
+    @media (min-width: 750px) {
+      background: url('../../../uploads/2019/03/entete__realisations_eleGraphique-table.png') no-repeat 0% 100%;
+      background-size: cover;
+      right: -16px;
+      bottom: 0;
+    }
+    @media (min-width: 1001px) {
+      padding-right: calc(700px + 50%);
+      background: url('../../../uploads/2019/03/entete__realisations_eleGraphique-ecranLarge.png') no-repeat 100% 100%;
+      background-size: 100%;
+      right: calc(400px - 60%);
+      left:0;
+    }
+  }
+}
+
+.single-realisations, .single-equipe, .single-services {
+  #en-tete {
+    width: 100%;
+    height: 130px;
+    position: relative;
+    background-color: $marine;
+    transition: all ease .5s;
+    &.menuMobile__ouvert {
+      height: 360px;
+    }
+  }
+  #en-tete h1 {
+    padding: 10px;
+  }
+}
+
+
+.inline {
+  display: inline;
+}
+header .titresEntete {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header .barreNav {
+  max-width: 1000px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  /* @todo ajouter le z-index pour la nav */
+  z-index: 5;
+  &.menu__fondMarine {
+    background-color: $marine;
+  }
+  @media (min-width:$bureau) {
+    align-items: center;
+  }
+}
+
+/* Barre des menus */
+#en-tete nav ul {
+  list-style: none;
+}
+#en-tete nav li {
+  display: inline-block;
+}
+#en-tete nav a {
+  color: $blanc;
+}
+
+/*** MENU MOBILE *******************************************************************************************/
+.barreNav {
+  &__logo {
+      width: 100px;
+      @media(min-width:$bureau) {
+        width: span(4 of 12);
+      }
+    }
+  @media (min-width:$bureau) {
+    &__menu {
+      width: span(7 of 12);
+    }
+  }
+}
+
+
+.menuMobile {
+  &__icone {
+    display:inline-block;
+    width: 58px;
+    height: 58px;
+    background: url('../../../uploads/2019/03/icone__menu.png') no-repeat center center;
+    background-size: contain;
+    &--ferme {
+      width: 72px;
+      height: 72px;
+      background: url('../../../uploads/2019/03/icone__menu-fermer.png') no-repeat center center;
+      background-size: contain;
+    }
+  }
+}
+
+.barreOnglets {
+  //position: relative;
+  &__onglets {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    position: absolute;
+    width:100%;
+    left: 0;
+    top: 117px;
+    margin: 0;
+    padding: 0 0 30px;
+    background-color: $marine;
+    @media (min-width:$bureau) {
+      position: inherit;
+      flex-flow: row nowrap;
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+  &__controle {
+    width: fit-content;
+    display: block;
+    &.mobileOnly {
+      @media(min-width:$bureau) {
+        display:none;
+      }
+    }
+  }
+  &__onglet {
+    font-size: 18px;
+    box-shadow: 0 -4px 7px -4px transparentize($turquoise, 0.15) inset;
+    border-bottom: 2px $turquoise outset;
+    &.current_page_item, &:hover {
+      font-weight: 500;
+      border-bottom: 3px $turquoise solid;
+      background-image: linear-gradient(0deg, transparentize($turquoise, 0.75), transparent);
+    }
+    &:nth-of-type(even) {
+      box-shadow: 0 -4px 7px -4px transparentize($rosePale, 0.25) inset;
+      border-bottom: 2px $magenta outset;
+      &.current_page_item, &:hover {
+        font-weight: 500;
+        border-bottom: 3px $magenta solid;
+        background-image: linear-gradient(0deg, transparentize($magenta, 0.75), transparent);
+      }
+    }
+    @media (min-width:$bureau) {
+      box-shadow: none;
+      border-bottom: none;
+      a {
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          opacity: 0;
+          //bottom: -200%;
+          top: 45%;
+          left: -60%;
+          width: 218%;
+          height: 72px;
+          display: block;
+          background: url(../../../uploads/2019/03/motifRayons_turquoise.png) no-repeat bottom center;
+          background-size: contain;
+          transition: all ease 0.5s;
+        }
+      }
+
+      &.current_page_item, &:hover {
+        font-weight: inherit;
+        border-bottom: none;
+        background-image: none;
+        position: relative;
+        a:after {
+          opacity: 1;
+        }
+      }
+      &.current_page_item {
+         font-weight: 700;
+      }
+
+      &:nth-of-type(even) {
+        box-shadow: none;
+        border-bottom: none;
+        &.current_page_item, &:hover {
+          font-weight: inherit;
+          border-bottom: none;
+          background-image:none;
+          position: relative;
+          a:after {
+            background-image: url(../../../uploads/2019/03/motifRayons_rose.png);
+            //background-size: contain;
+          }
+        }
+        &.current_page_item {
+          font-weight: 700;
+        }
+      }
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      padding: 20px 0 10px 20px;
+      @media(min-width:$bureau) {
+        padding: 0;
+      }
+    }
+
+  }
+}
+
+.js {
+  .barreOnglets {
+    &__onglets {
+      transition: all ease .5s;
+      @media(max-width:$bureau) {
+        &--invisible {
+          display: none;
+        }
+      }
+    }
+  }
+}
+

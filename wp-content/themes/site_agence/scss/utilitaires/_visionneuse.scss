@@ -1,0 +1,98 @@
+/**
+* @author Marie-Noëlle Grant <m.noelle.grant@gmail.com>
+*/
+
+  /*** Pagination visionneuse ***/
+.metaslider .flexslider .flex-control-nav a {
+  background: radial-gradient($marine 50%, $blanc 67%);
+  &.flex-active {
+    background: radial-gradient($turquoise 39%, transparentize($turquoise, 0.8) 100%)
+  }
+}
+
+/*** Fleches visionneuse ***/
+.metaslider {
+  &.visionneuse {
+    margin-bottom: 45px;
+    @media(min-width:$bureau) {
+      padding-bottom: 120px;
+      padding-top: 24px;
+    }
+  }
+  #metaslider_481 {
+    margin: 0 0 68px;
+    height: 420px;
+  }
+  #metaslider_487 {
+    .flex-viewport {
+      @media(min-width:$bureau) {
+        width: span(8 of 12);
+        margin-left: span(3 of 12) + gutter(12);
+      }
+    }
+  }
+  #metaslider_481, #metaslider_487 {
+    .flex-direction-nav {
+      position: absolute;
+      width: 100%;
+      height: fit-content;
+      bottom: -25px;
+      max-width: 406px;
+      @media(min-width:$bureau) {
+        top: 0;
+        margin: auto;
+        max-width: none;
+      }
+      li a {
+        top: 105%;
+        opacity: 1;
+        background-image: url("../../../uploads/2019/03/fleche_inactive.png");
+        background-size: contain;
+        width: 42px;
+        height: 42px;
+        @media (min-width:$bureau) {
+          width: 52px;
+          height: 52px;
+          opacity: 0.6;
+          transition: all ease .3s;
+          &:hover {
+            opacity: 1;
+            transform: scale(1.1);
+          }
+        }
+        &.flex-next {
+          background-image: url("../../../uploads/2019/03/fleche_active.png");
+          @media (min-width:$bureau) {
+            right: 0;
+          }
+        }
+        &.flex-prev {
+          @media (min-width: $bureau) {
+            left: 0;
+          }
+        }
+      }
+    }
+    .flex-control-nav {
+      bottom: -34px;
+      max-width: 396px;
+      @media (min-width:$bureau) {
+        max-width: none;
+        bottom: -50px;
+        text-align: right;
+        padding-right: span(1 of 12) + gutter(12);
+        line-height: 20px;
+      }
+      li {
+        zoom: 1.5;
+        @media (min-width:$bureau) {
+          zoom: 1.7;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+
+

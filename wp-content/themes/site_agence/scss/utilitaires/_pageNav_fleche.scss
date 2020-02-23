@@ -1,0 +1,85 @@
+.pageSeule_nav{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  &_titre{
+    text-align: center;
+    @include fontSize(14px);
+    max-width: 118px;
+    @media (min-width:$bureau) {
+      @include fontSize(16px);
+      max-width: 130px;
+      opacity: 0;
+      transition: all ease 0.5s;
+    }
+  }
+  &_fleche{
+    width: 32px;
+    @media (min-width: 601px) {
+      width: span(3 of 12);
+      opacity: 0.6;
+    }
+  }
+  &_before, &_next {
+    .icone {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      height: 60px;
+      width: 100%;
+      @media (min-width: 601px) {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-content: center;
+        height: initial;
+      }
+      &:hover {
+        .pageSeule_nav_fleche {
+          opacity: 1;
+        }
+        .pageSeule_nav_titre {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &_sousConteneur {
+    @media (min-width:$bureau) {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+  }
+  &_before {
+    .pageSeule_nav_titre {
+      padding-left: 10px;
+      @media (min-width:$bureau) {
+        padding-left: 0;
+      }
+    }
+  }
+  &_next {
+    .pageSeule_nav {
+      &_titre {
+        padding-right: 10px;
+        @media (min-width:$bureau) {
+          padding-right: 0;
+        }
+      }
+      &_sousConteneur {
+        @media (min-width: $bureau) {
+          display: flex;
+          flex-flow: column-reverse nowrap;
+          align-items: center;
+        }
+      }
+    }
+    .icone {
+      @media (min-width:$bureau) {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

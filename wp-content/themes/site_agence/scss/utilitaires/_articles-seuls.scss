@@ -1,0 +1,29 @@
+/* Les articles en page seule */
+#article-seul {
+  padding-right: 8px;
+}
+.metadata {
+  color: gray;
+}
+@media (max-width: $bureau) {
+  #article-seul {
+    float: none;
+    width: 100%!important;
+    border-bottom: 1px solid #333;
+  }
+}
+
+/* Mis en forme des articles au format Par défaut */
+.article {
+  padding-left: 0;
+  border: none;
+}
+.extrait {
+  font-style: italic;
+  color: gray;
+}
+footer.article {
+  font-size: small;
+  font-style: italic;
+  color: gray;
+}

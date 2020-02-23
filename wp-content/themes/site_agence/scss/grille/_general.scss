@@ -1,0 +1,50 @@
+/**
+ * @author Ève Février - efevrier@cegep-ste-foy.qc.ca
+ * @author Yves Hélie - yves.helie@cegep-ste-foy.qc.ca
+ * @todo
+*/
+
+@include border-box-sizing;
+
+@media(max-width:(($bureau)-1px)){
+  $susy: (
+          'columns': susy-repeat(4),
+          'gutters': 0.25,
+          'spread': 'narrow',
+          'container-spread': 'wide',
+  );
+  .conteneur {
+    //background: susy-svg-grid($susy) no-repeat scroll;
+  }
+}
+@media(min-width:$bureau){
+  $susy: (
+          'columns': susy-repeat(12),
+          'gutters': 0.25,
+          'spread': 'narrow',
+          'container-spread': 'wide'
+  );
+  .conteneur {
+    //background: susy-svg-grid($susy) no-repeat scroll;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+}
+
+.conteneur {
+  // Pour combler l'espace laissé par le container-spread : wide
+  padding: 0 gutter(4)/2;
+  @media (min-width: $bureau) {
+    padding: 0 gutter(12)/2;
+    // Pour conteneurs flex. Régles les plus communes, à changer au besoin!
+    &__flex {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+    }
+    &__relatif {
+      position: relative;
+    }
+  }
+}
+

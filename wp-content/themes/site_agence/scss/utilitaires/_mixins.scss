@@ -1,0 +1,138 @@
+/**
+* @author Ève Février - efevrier@cegep-ste-foy.qc.ca
+* @author Yves Hélie - yves.helie@cegep-ste-foy.qc.ca
+* @author Marie-Noëlle Grant <m.noelle.grant@gmail.com>
+* @todo Ajouter des mixins si vous pensez qu'elles seront utiles!!
+*/
+
+/**
+ * ----------------------------
+ * TABLE DES MATIERES - MIXINS
+ * ----------------------------
+ * Utilitaires de base
+ ** Box sizing
+ ** Clearfix
+ * Accessibilité
+ * Typographie
+ * Box shadow
+ */
+
+/********** Utilitaires de base **********/
+
+/** Box sizing **/
+@mixin border-box-sizing {
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+}
+
+/* Clearfix */
+@mixin clearfix {
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+/********* Accessibilité *********/
+
+// Hide only visually, but have it available for screenreaders:
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+
+  // Extends the .visuallyhidden class to allow the element to be focusable
+  // when navigated to via the keyboard: https://www.drupal.org/node/897638
+  &.focusable:active,
+  &.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+}
+
+.visuallyhidden,
+.screen-reader-only {
+  @include visuallyhidden;
+}
+
+/******** Typographie *********/
+
+// Fonction pour convertir une valeur de font-size en pixels à son équivalent rem
+@function calculateRem($size) {
+  $remSize: $size / 10px;
+  @return #{$remSize}rem;
+}
+
+// Mixin qui inclus la solution de repli en pixel suivi par la valeur calculée en rem
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+
+/******** Shadow box *********/
+// Pour utilisation sur fond pâle
+@mixin boxShadow_Magenta-fonce {
+  background-color: transparent;
+  border: solid 2px $magenta;
+  box-shadow: 0 0 10px transparentize($magenta, 0.75);
+}
+
+// Pour utilisation sur fond foncé
+@mixin boxShadow_Magenta-pale {
+  background-color: transparent;
+  border: solid 2px $magenta;
+  box-shadow: 0 0 10px transparentize($rosePale, 0.75);
+}
+
+@mixin boxShadow_Turquoise {
+  background-color: transparent;
+  border: solid 2px $turquoise;
+  box-shadow: 0 0 10px transparentize($turquoise, 0.75);
+}
+
+@mixin boxShadow_Blanc {
+  background-color: transparent;
+  border: solid 2px $blanc;
+  box-shadow: 0 0 10px transparentize($blanc, 0.25), 0 0 10px transparentize($blanc, 0.25) inset;
+}
+
+@mixin boxShadow_Noir {
+  background-color: transparent;
+  border: solid 2px $noir;
+  box-shadow: 0 0 10px transparentize($noir, 0.5), 0 0 10px transparentize($noir, 0.5) inset;
+}
+
+
+
+/******** Soulignés *********/
+@mixin souligneMagenta {
+  background-color: transparent;
+  border-bottom: solid 2px $magenta;
+  box-shadow: 0 15px 10x -15px transparentize($magenta, 0.75);
+}
+
+@mixin souligneTurquoise {
+  background-color: transparent;
+  border-bottom: solid 2px $turquoise;
+  box-shadow: 0 15px 10x -15px transparentize($turquoise, 0.75);
+}
+
+
+
+

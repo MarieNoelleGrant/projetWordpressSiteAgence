@@ -1,0 +1,119 @@
+/**
+ * @author Marie-Noëlle Grant <m.noelle.grant@gmail.com>
+ */
+
+/*** FOOTER **********************************************************************************************/
+
+/* Regles générales */
+
+/* Regles typo spécifiques au footer */
+.footer p {
+  margin: 0;
+  padding: 0 10px;
+  font-weight: 300;
+  &.h4 {
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+}
+
+/* Regles conteneur spécifiques au footer (flex) */
+.footer .conteneur {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 500px;
+}
+
+/* Styles footer mobile */
+.footer {
+  background-color: $marine;
+  clear: both;
+  color: $blanc;
+  padding-top: 20px;
+  &__arrierePlan {
+    padding-top: 50%;
+    background: url('../../../uploads/2019/03/fond__footer_neons-mobile.jpg') no-repeat top center, url('../../../uploads/2019/03/fond__footer_grid-mobile.jpg') no-repeat bottom center;
+    background-size: contain, cover;
+  }
+  &__logoIcones {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  &__sociaux {
+    width: span(3 of 4);
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-left: 5px;
+    &_fb, &_tw, &_in {
+      width: 60px;
+    }
+  }
+  &__adresse, &__contact {
+    width: fit-content;
+  }
+  &__credits {
+    @include fontSize(12px);
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+/* Styles footer table */
+@media (min-width:$bureau) {
+  .footer .conteneur {
+    flex-flow: row wrap;
+    height: auto;
+  }
+
+  .footer {
+    &__arrierePlan {
+      padding-top: 17%;
+      padding-bottom: 50px;
+      background: url('../../../uploads/2019/03/fond__footer_neons-table.jpg') no-repeat top center, url('../../../uploads/2019/03/fond__footer_grid-table.jpg') no-repeat bottom center;
+      background-size: contain, contain;
+    }
+    &__logoIcones {
+      width: span(4 of 12);
+      margin: initial;
+      margin-right: span(1 of 12)+gutter(12);
+    }
+    &__sociaux {
+      display: flex;
+      flex-flow: row nowrap;
+      margin: initial;
+      width: 100%;
+      &_fb, &_tw, &_in {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        transition: all ease .5s;
+        transform: translateY(4px);
+        img {
+          transition: all ease .5s;
+        }
+        &:hover {
+          transform: translateY(0);
+          img{
+            -webkit-filter: brightness(3);
+            filter: brightness(3);
+          }
+        }
+      }
+    }
+    &__adresse {
+      width: span(3 of 12);
+    }
+    &__contact {
+      width: span(4 of 12);
+      color: $blanc;
+    }
+    &__credits {
+      width: span(12 of 12);
+      margin-top: 60px;
+    }
+  }
+}
